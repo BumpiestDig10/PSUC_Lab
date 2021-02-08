@@ -16,19 +16,19 @@ int main()
     {
         case 1:
             result = a + b;
-            printf("%f + %f = %f\n", a, b, result);
+            printf("%.3f + %.3f = %.3f\n", a, b, result);
             break;
         case 2:
             result = a - b;
-            printf("%f - %f = %f\n", a, b, result);
+            printf("%.3f - %.3f = %.3f\n", a, b, result);
             break;
         case 3:
             result = a * b;
-            printf("%f * %f = %f\n", a, b, result);
+            printf("%.3f * %.3f = %.3f\n", a, b, result);
             break;
         case 4:
             result = a / b;
-            printf("%f/%f = %f\n", a, b, result);
+            printf("%.3f/%.3f = %.3f\n", a, b, result);
             break;
         default: printf("Invalid!\n");
             break;

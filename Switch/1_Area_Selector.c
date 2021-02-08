@@ -16,7 +16,7 @@ int main()
             printf("Enter the radius: ");
             scanf("%f", &radius);
             area = (radius*radius*22)/7;
-            printf("Area of the circle = %f\n", area);
+            printf("Area of the circle = %.2f\n", area);
             break;
         case 2:
             printf("You have selected Rectangle.\n");
@@ -26,7 +26,7 @@ int main()
             printf("Enter breadth: ");
             scanf("%f", &breadth);
             area = length*breadth;
-            printf("Area of the rectangle = %f\n", area);
+            printf("Area of the rectangle = %.2f\n", area);
             break;
         case 3:
             printf("You have selected Triangle.\n");
@@ -36,7 +36,7 @@ int main()
             printf("Enter height: ");
             scanf("%f", &height);
             area = (base*height)/2;
-            printf("Area of the triangle is: %f\n", area);
+            printf("Area of the triangle is: %.2f\n", area);
             break;
         default:
             printf("Invalid choice.\n");

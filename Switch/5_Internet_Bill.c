@@ -31,7 +31,7 @@ int main()
     {
         case 1:
             bill = 200;
-            printf("Bill: Rs.%f\n", bill);
+            printf("Bill: Rs.%.2f\n", bill);
             break;
         case 2:
             bill = 200;
@@ -39,7 +39,7 @@ int main()
             {
                 bill = bill + 0.6;
             }
-            printf("Bill: Rs.%f\n", bill);
+            printf("Bill: Rs.%.2f\n", bill);
             break;
         case 3:
             bill = 230;
@@ -47,7 +47,7 @@ int main()
             {
                 bill = bill + 0.5;
             }
-            printf("Bill: Rs.%f\n", bill);
+            printf("Bill: Rs.%.2f\n", bill);
             break;
         case 4:
             bill = 255;
@@ -55,7 +55,7 @@ int main()
             {
                 bill = bill + 0.4;
             }
-            printf("Bill: Rs.%f\n", bill);
+            printf("Bill: Rs.%.2f\n", bill);
             break;
         default: printf("Invalid!\n");
             break;
