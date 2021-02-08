@@ -8,7 +8,7 @@ int main()
     scanf("%f", &radius);
 
     area = 22*radius*radius/7.0;
-    printf("Area = %f\n", area);
+    printf("Area = %.2f\n", area);
 
     return 0;
 }

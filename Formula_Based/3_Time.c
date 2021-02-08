@@ -12,7 +12,7 @@ int main()
     minutes = (seconds%3600)/60;
     seconds = ((seconds%3600)%60);
 
-    printf("%dhour(s) %dminute(s) %dsecond(s)", hours,minutes,seconds);
+    printf("%dhour(s) %dminute(s) %dsecond(s)\n", hours,minutes,seconds);
 
     return 0;
 }

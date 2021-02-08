@@ -13,14 +13,14 @@ int main()
         printf("Temperature: ");
         scanf("%f", &c);
         f = ((9*c)/5)+32;
-        printf("In Fahrenheit: %f\n", f);
+        printf("In Fahrenheit: %.2ff\n", f);
     }
     else if(option == 2)
     {
         printf("Temperature: ");
         scanf("%f", &f);
         c = (5*(f-32))/9;
-        printf("In Centigrade: %f\n", c);
+        printf("In Centigrade: %.2fc\n", c);
     }
     else
     {
