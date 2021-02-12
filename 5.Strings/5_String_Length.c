@@ -15,6 +15,7 @@ int main()
         counter++;
         i++;
     }
+    i--;
     printf("Length of string is %d.\n", i);
 
     return 0;

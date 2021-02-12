@@ -1,27 +1,39 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
-    char str[100];
-    
-    printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin);
-    printf("\n");
+    char str1[80], str2[80];
+    int l, i, j;
 
-    int position, length;
-    printf("Enter position and length of substring:\n");
-    scanf("%d%d", &position, &length);
+    printf("Enter first string: ");
+    gets(str1);
 
-    char sub[100];
-    int i = 0;
-    
-    while(i < length)
+    printf("Enter second string: ");
+    gets(str2);
+
+    //finding length of second string
+    for (l = 0; str2[l] != '\0'; l++);
+
+    for (i = 0, j = 0; str1[i] != '\0' && str2[j] != '\0'; i++)
     {
-        sub[i] = str[position+i-1];
-        i++;
+        if (str1[i] == str2[j])
+        {
+            j++;
+        }
+        else
+        {
+            j = 0;
+        }
     }
-    sub[i] = '\0';
 
-    printf("Selected substring is \"%s\" \n", sub);
+    if (j == l)
+    {
+        printf("Substring found at position %d\n", i - j + 1);
+    }
+    else
+    {
+        printf("Substring not found\n");
+    }
+
     return 0;
 }
