@@ -3,15 +3,28 @@
 
 char name[25][25];
 int count;
+int i, j;
 
 void sort(int count);
+int compare();
 
 int main()
 {
     printf("Number of names: ");
     scanf("%d", &count);
 
+    printf("Enter names one by one:\n");
+    for(i = 0; i <= count; i++)
+    {
+        fgets(name[i], sizeof(name[i]), stdin);
+    }
     sort(count);
+
+    printf("\nSorted name: ");
+    for(i = 0; i <= count; i++)
+    {
+        fputs(name[i], stdout);
+    }
 
     return 0;
 }
@@ -20,17 +33,11 @@ void sort(int count)
 {
     char temp[25];
 
-    printf("Enter names one by one: ");
-    for(int i = 0; i <= count; i++)
+    for(i = 0; i <= count; i++)
     {
-        gets(name[i]);
-    }
-
-    for(int i = 0; i <= count; i++)
-    {
-        for(int j = i+1; j <= count; j++)
+        for(j = i+1; j <= count; j++)
         {
-            if(strcmp(name[i], name[j]) > 0)
+            if(compare() > 0)
             {
                 strcpy(temp, name[i]);
                 strcpy(name[i], name[j]);
@@ -38,10 +45,9 @@ void sort(int count)
             }
         }
     }
+}
 
-    printf("Sorted name: ");
-    for(int i = 0; i <= count; i++)
-    {
-        puts(name[i]);
-    }
+int compare()
+{
+    return strcmp(name[i], name[j]);
 }
